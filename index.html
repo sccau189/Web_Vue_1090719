@@ -26,12 +26,53 @@
         <a v-bind:href="google">google</a>
     </div>
 
-    <h1>判斷式</h1>
+    <h1>判斷式 if</h1>
     <div id="vue3">
         <!-- 判斷式 v-if="資料名稱" -->
         <!-- 當資料 ture 顯示，反之 隱藏 -->
         <p v-if="text">我是段落文字</p>
+        
+        <h2>活動特價區</h2>
+        <a href="#" v-if="activity">特價區請進~~</a>
+        <span v-else="activity">活動結束!!</span>
     </div>
+    
+    <h1>迴圈 for</h1>
+
+    <div id="vue4">
+        <!-- v-for="變數 in 次數" -->
+        <a href="#" v-for="n in 5">分頁連結{{ n }}</a>
+
+        <div v-for="p in products">
+            <h3>{{ p.name }}</h3>
+            <h4>價格 : {{ p.price }}元</h4>
+            <h4>說明 : {{ p.text }}</h4>
+            <hr>
+        </div>
+    </div>
+
+    <h3>事件</h3>
+    <div id="vue5">
+        <h2 v-on:dblclick="showon">我是標題二 請點兩下 {{text}}</h2>
+        <a v-on:click="show" href="https://tigersugar.com/">點我</a>
+        
+        <div>
+            啤酒 {{count}} 箱
+            <span v-on:click="add">+</span>
+            <!-- v-on:click 簡寫 @click -->
+            <!-- v-on:click 簡寫 @click 點一下; v-on:dblclick 簡寫 @dblclick 點兩下 -->
+            <span @click="sub">-</span>
+        </div>
+    </div>
+
+    <h3>使用者輸入資訊</h3>
+    <!-- v-model="資料名稱" -->
+    <div id="vue6">
+        <label >請輸入您的名字</label><input type="text" v-model="name">
+        <p>{{ name }}您好，這是您的帳號資訊:</p>
+    </div>
+
+
     
     <!-- Vue CDN -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
