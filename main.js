@@ -20,3 +20,11 @@ var vue2 = new Vue({
         google: "https://www.google.com.tw/?hl=zh-TW"
     }
 })
+
+var vue3 = new Vue({
+    el:"#vue3",
+    data:{
+        // 布林值
+        text: true,
+    }
+})
