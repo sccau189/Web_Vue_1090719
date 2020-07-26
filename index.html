@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div id="navbar">
+        <navbar></navbar>
+    </div>
+    
     <h1>定義渲染區域</h1>
     <div id="vue1">
         {{text}}
@@ -14,7 +18,20 @@
             {{text}}
         </h1>
         <!-- 數字能相+-*/ -->
-        {{a/b}}  
+        {{a/b}}
+        
+        <h2>
+            {{text + a}}
+        </h2>
+
+        <h3>
+            {{text}}
+            {{text}}
+        </h3>
+
+        <h4>
+            {{ a + b }}
+        </h4>
 
     </div>
 
@@ -72,6 +89,20 @@
         <p>{{ name }}您好，這是您的帳號資訊:</p>
     </div>
 
+    <!-- 使用元件 -->
+    <div id="vue7">
+        <test-a></test-a>
+        <test-a></test-a>
+        <test-a></test-a>
+        <test-a></test-a>
+    </div>
+
+    <div id="vue8">
+        <vue-content></vue-content>
+        <vue-content></vue-content>
+        <vue-content></vue-content>
+        <vue-content></vue-content>
+    </div>
 
     
     <!-- Vue CDN -->

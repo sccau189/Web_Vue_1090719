@@ -74,4 +74,45 @@ var vue6 = new Vue({
     data: {
         name:""
     }
+});
+
+// 定義元件
+// ("元件名稱"，{ 模板 : "元件內容" })
+Vue.component("test-a",{
+    template:"<h2>這是測試元件</h2>"
 })
+
+var vue7 = new Vue({
+    el:"#vue7"
+})
+
+// ''"" 單行 HTML
+// ``多行 HTML
+Vue.component("vue-content",{
+    template: `<div>
+    <h3>練習三</h3>
+    <p>段落文字</p>
+    <hr></div>` 
+})
+
+var vue8 = new Vue({
+    el: "#vue8"
+});
+
+// 元件應用 : 分頁重複內容 導覽列 頁尾
+Vue. component("navbar",{
+    template : `
+    <nav>
+        <a href="./about.html">關於我</a>
+        <a href="./work.html">作品集</a>
+        <a href="./index.html">logo</a>
+        <a href="#">聯絡我</a>
+        <a href="#">產品</a>
+    </nav>
+    `
+})
+
+var navbar = new Vue({
+    el: "#navbar"
+})
+
